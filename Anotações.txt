@@ -1,0 +1,172 @@
+Anotações HTML5
+
+Atributos Globais:
+    accesskey:          Define uma tecla de atalho para focar no elemento.
+    class:              Define quais classes CSS serão aplicadas no elemento.
+    contenteditable:    Define se o conteúdo do elemento pode ou não ser editável.
+    data-*:             Usado para armazenar dados em um elemento. No lugar do (*) deve definir um nome.
+    dir:                Define a direção do conteúdo de um elemento.
+    draggable:          Define se o elemento pode ser arrastado ou não.
+    dropzone:           Define o que acontece quando o elemento arrastado é solto neste elemento.
+    hidden:             Define o elemento como oculto.
+    id:                 Define uma identificação única para o elemento.
+    lang:               Define a linguagem do conteúdo do elemento.
+    spellcheck:         Define se o conteúdo do elemento deve ter sua ortografia verificada.
+    style:              Define estilos CSS diretamente no elemento.
+    tabindex:           Define a posição do elemento na ordem de tabulação da página.
+    title:              Define informações sobre o elemento.
+    translate:          Define se o conteúdo do elemento pode ser traduzido ou não.
+
+Tags HTML5:
+    <html xmlns ></html> tag define o documento HTML.
+        xmlns: Atributo que define que o arquivo está em conformidade com XHML.
+        Etilo padrão da tag, display:block, html:focus{outline:none}
+    
+    <!DOCTYPE html > Tag que define que o arquivo é um documento html 5.
+    
+    <!-- Comentarios --> tag para documentar o código.
+
+    <body></body> tag body é ocorpo do nosso doc html.
+        Estilo padrão da tag Body, display:block, margin: 8px, body:focus{outline:none} 
+    
+    <head></head> tag de cabeçalho do codumento html fica antes do body,
+        Estilo padrão display:none,
+
+    <title></title> tag de titulo do Documento HTML.
+        Estilo padrão display:none, 
+
+    <meta > tag que define os dados que são carregados no site.
+        Atributos que são só da tag meta.
+            charset: define qual codificação de caracteres ira ser usada no documento.
+            content define o conteudo associado ao http-equiv.
+            http-equiv> prove um cabeçalho HTTP com informações do conteudo atributo.
+            name Define o nome do metodo.
+    
+    <p></p> tag que define um parágrafo.
+        Estilo padrão display:block, margin-top e bottom: 1em; margin-letf e right:0;
+    
+    h1 titulo principal
+    h2 titulo secundario
+    h3 titulo teceiro
+    h4 titulo quarto
+    h5 titulo quint
+    h6 titulo sexto
+
+    <style></style> Tag para definir o estilo da pagina.
+        atributo dó da tag style media: define a midia, type: define o tipo de midia.
+
+    <script></script> tag que define a area para a criação de comandos em jacaScript. pode ser usada para apontar para um aquivo javascript.
+        atributo exclusivo do script:
+            async
+            charset
+            defer
+            scr
+            type
+
+    <div></div> tag que define uma divisão do documento.
+        estilo padrão display:block.
+ 
+    <span></span> tag usada para agrupar text ou tags em um documento.
+
+    <Link> usada para linkar um documento exter a sua pagina.
+        atributo exclusivo da tag link:
+            corossorigin, href, hreflang, media, rel, sizes, type.
+
+    <noscript></noscript> a tag define um conteudo alternativo para usuarios que desativarem o javascript.
+
+    <embde></embde> tag usada para definir um conteudo externo embutido.
+        atributo exclusivo da tag embde:
+            height, sec, type, width,
+    
+    <object></object> tag usando para definir um objeto incorporado no documento html
+        Ex Audio, Video, PDF, Java, ActvieX e etc.
+        atributo exclusivo:
+            data: url do recurso.
+            form:
+            height, name, type, width
+            usemap:
+
+    <param> tag usada para definir parametros para um object.
+    
+    <base> usada para definir uma url padrão para todos os links
+
+    <iframe></iframe> usada para definir um quadro embutido na pagina, para inbutir outro arquivo htmk;
+        atributo exclusivo:
+            height, name, sandbox, src, srcdoc, width.
+    
+
+    <a></a> tag usada para definir um hyperlink a outros documentos html seu ou de terceiro local ou não.
+        atributo exclusivo:
+            href, hreflang, download, media, ping, referrepoli, cy, rel, target, type.
+
+    <img> tag usada para colcoar uma imagem no seu documento.
+        atributo exclusivo:
+            src alt --> são obrigatorios.
+            corossorigin, height, ismap, logdesc, sizes, src, srcset, usemap, width
+
+    <figure></figure> usada para definir uma foto ilustração diagrama etc
+
+    <figcaption></figcaption> usada para definir uma legenda para a tag figure
+
+    <audio></audio> usada para inserir um audio no documento html, mp3 wav ogg.
+        atributo exclusivo:
+            autoplay, controls, loop, muted, preload, src.
+
+    <video></video> usada para inserir um video no documento html mp4 webm ogg
+        atributo exclusivo:
+            autoplay, controls, height, loop, muted, poster, preload, src, width
+
+    <source> usada para definir uma fonte de midia
+        usada junto com a tag audio, video e picture
+            atributo exclusivo:
+            src, srcset, midia, sizes, type
+
+    <picture></picture>  usada para inserir uma imagem, com mais opções de source
+
+    <track> usada para definir uma faixa de testo em uma tag de midia
+        atributo exclusivo:
+            default, kind, label, src, srclang
+
+-------------- bloco sobre table -----------------------
+    <table></table> para defenir uma tabela
+    
+    <tr></tr> linhas das tabela
+    <td></td> define a celula dentro da linha
+        atributo exclusivo: colspan, headers, rowspan
+    <th></th> celuldas de cabeçalhos da tabela
+        atributo exclusivo: abbr, colspan, headers, rowspan, scope, sorted
+
+    <thead></thead> cabeçalho da tabela.
+    
+    <tbody><tabela/tbody> usada para definir o corpo da tabela
+
+    <tfoot></tfoot> usada para definir o rodapé da tabela
+
+    <template></template> um container html para guardar o codigo para renderiar depois
+
+    <colgroup></colgroup> define a propriedade de todas as celulas de uma coluna
+        atributo exclusivo: span
+
+    <col> define a propriedade de todas as celulas que formam uma colina
+        atributo exclusivo: span
+
+    <caption></caption> usada para definir uma legenda ou subtitula na tabela
+------------------------------------------------------------------------------------------
+
+    <header></headers> tag de cabeçalho do documento.  
+
+    <main></main> tag define conteudo principal
+
+    <footer></footer> define um hodape do documento html
+
+    <article></article> define um artigo
+
+    <section></section> tag define uma sessão 
+
+    <aside></aside> conteudo lateral do site
+
+    <nav></anv> tag para fazer o menu
+
+
+----------------------------------------------------------------------
+Eventos do HTML5 

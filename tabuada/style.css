@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+body{
+    background-color: #f2f2f2;
+}
+
+.content-center {
+    background-color: white;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content-center td{
+    padding: 10px;
+    border-top: 1px solid #999;
+}
+
+.content-center table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.content-center tbody tr:nth-child(even){
+    background-color: rgba(0,0,0,.05);
+}
+
+.content-center tbody tr:hover{
+    background: rgba(0,0,0,.15);
+}
+

@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
+body{
+    background-color: #f2f2f2;
+}
+
+.content-center {
+    background-color: white;
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content-center img{
+    width: 80%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.content-center form{
+    margin: 20px;
+}
+
+.content-center input,
+.content-center button{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 3px;
+    border: none;
+    outline: none;
+
+
+}
+
+.content-center input{
+    border-radius: 5px;
+    border-bottom: solid 1px #ccc;
+}
+
+.content-center button{
+    background-color: #D07335;
+    border-radius: 5px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.content-center button:hover{
+    background-color: #B55B18;
+}
+
+.content-center button:active{
+    background-color: #C1430E;
+}
+
+.content-center input:focus{
+    border-bottom-color: #D07335;
+}
+
+header a{
+    color: #666;
+    text-decoration: none;
+}
+
+header a:visited{
+    color: #000;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+header h1{
+    font-size: 2.5em;
+    text-align: center;
+    margin: 50px auto;
+}
+
+footer{
+    font-size: .8em;
+    text-align: center;
+}
+
+.content-center ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.content-center li {
+    padding: 10px;
+    border-bottom: #ccc solid 1px;
+}
+
+.content-center li input{
+    width: initial;
+    margin-right: 10px;
+}
+
+.content-center li.complete{
+    text-decoration: line-through;
+    color: #999;
+    cursor: not-allowed;
+}
+
+#new-task{
+    width: 1005;
+    padding: 10px;
+}
+
+.todo button{
+    width: initial;
+    min-width: 30px;
+    color: #fff;
+    background-color: red;
+    float: right;
+    text-align: center;
+}

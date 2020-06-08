@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cecece;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-center {
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+}
+
+.content-center .text-center{
+    text-align: center;
+}
+
+.content-center div img {
+    width: 70%;
+}
+
+.content-center form{
+    margin: 20px;
+}
+
+.content-center input,
+.content-center button {
+    width: 100%;
+    margin: 5px;
+    padding: 10px 5px;
+    border: none;
+}
+
+.content-center input{
+    border-bottom:1px solid black ;
+}
+
+.content-center button{
+    border-radius: 5px;
+    background-color: rgb(243, 157, 28);
+    color: white;
+    cursor: pointer;
+}
+
+.content-center button:hover{
+    text-decoration: underline;
+    background-color: rgb(206, 134, 27);
+}
+
+.content-center button:active{
+    background-color: rgb(185, 122, 27);
+}
+
+.content-center input:focus{
+    border-color: rgb(243, 157, 28);
+}
+
+header a {
+    color: #999;
+    text-decoration: none;
+}
+
+header a:visited{
+    color: black;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+header a:focus{
+    color: red;
+}
+
+header a:active{
+    color: orange;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 50px auto;
+}
+
+footer {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.content-center td{
+    padding: 10px;
+}

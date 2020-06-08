@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Globais</title>
+    <style>
+        .botao{
+            border: none;
+            background-color: bisque;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .quadrado{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+        }
+
+        .drop{
+            width: 400px;
+            height: 200px;
+            background-color: burlywood;
+            border: red 1px solid;
+        }
+        #box1{
+            width: 150px;
+            height: 150px;
+            background-color: darkorange;
+        }
+        #box2{
+            width: 150px;
+            height: 150px;
+            background-color: darkolivegreen;  
+        }
+    </style>
+</head>
+<body>
+    <!-- Accesskey exemple -->
+    <button type="button" accesskey="n">Novo</button>
+    <button type="button" accesskey="s">Salva</button>
+    
+    </br>
+    </br>
+
+    <!-- Class-->
+    <h1>Class</h1>
+    <button class="botao" type="button">OK</button>
+    <a href="#" class="botao">Link</a>
+
+    </br>
+    </br>
+
+    <!-- Contenteditable -->
+    <h1>Contenteditable</h1>
+    <p contenteditable="true" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, quasi? Sequi tenetur maiores earum alias omnis. Maiores reprehenderit, rerum doloribus ducimus quasi earum amet natus hic maxime quisquam quas nobis?</p>
+
+    </br>
+    </br>
+
+    <!-- Data-* -->
+    <h1>Data-*</h1>
+    <u>
+        <li data-email="viniciosdb@gmail.com" data-id="1">Vinicio Deivid</li>    
+        <li data-email="viniciosdb@gmail.com" data-id="2">Vinicio Deivid</li>    
+    </u>
+    <script>
+        document.querySelectorAll('li').forEach(liEl=>{
+            console.log(liEl.dataset)
+        })
+    </script>
+
+    <br>
+    <br>
+
+    <!-- Dir, abreviação direction -->
+    <h1>dir</h1>
+    <p dir="ltr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi possimus repellat non molestias in vero impedit doloribus tenetur tempora cupiditate soluta molestiae similique numquam delectus, dignissimos, itaque ut dolore rerum.</p>
+
+    <p dir="rtl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure corrupti, sunt quos nulla magnam neque nisi eaque excepturi quam ducimus eius libero non vitae fugiat alias consequatur molestias animi atque.</p>
+
+    <br>
+    <br>
+
+    <!-- draggable -->
+    <h1>draggable</h1>
+    <button type="button" draggable="true" >OK</button>
+    <div class="quadrado" id="1" draggable="true" ></div>
+    <div class="quadrado" id="2" draggable="true" ></div>
+
+    <br>
+    <br>
+
+    <!-- dropzone -->
+    <h1>dropzone</h1>
+    <div class="drop" dropzone="copy"></div>
+
+    <script>
+        var box = document.querySelectorAll(".quadrado")
+        var drop = document.querySelector('[dropzone]');
+
+        box.forEach(boxEl=>{
+            boxEl.addEventListener('dragstart', e=>{
+                e.dataTransfer.setData('Text: ', e.target.id);
+                console.log(e.target.id);
+            });
+        });
+
+        drop.addEventListener('dragover', e=>{
+            e.preventDefault()
+        })
+
+        drop.addEventListener('drop', e=>{
+            const id = e.dataTransfer.getData('Text');
+            const element = document.getElementById(id);
+
+            e.target.appendChild(element);
+        })
+
+    </script>
+
+    <br>
+    <br>
+
+    <!-- hidden -->
+    <h1>hidden</h1>
+    <div hidden >Hcode</div>
+    <div>Treinamentos</div>
+
+    <br>
+    <br>
+
+    <!-- ID -->
+    <h1>ID</h1>
+    <div id="box1" ></div>
+    <div id="box2" ></div>
+    <script>
+        var box1 = document.getElementById('box1');
+        var box2 = document.getElementById('box2');
+
+        console.log(box1)
+        console.log(box2)
+    </script>
+
+    <br>
+    <br>
+
+    <!-- lang -->
+    <h1>lang</h1>
+    <h1 lang="en" >Hollo world</h1>
+    <p lang="en" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti error sit, dolorum, voluptatibus, dignissimos nihil quia atque modi magnam nobis tenetur repellat dolor fugit praesentium id? Soluta non aliquid repellat!</p>
+    <h1 lang="fr"> Bonjour le monde </h1>
+
+    <br>
+    <br>
+
+    <!-- spellcheck -->
+    <h1>spellcheck</h1>
+    <p spellcheck="true" contenteditable="true" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem reprehenderit placeat expedita recusandae, autem ratione quo cupiditate provident magni? Neque id, magnam consequuntur dolore voluptatibus iste optio voluptates aliquam provident?</p>
+
+    <p spellcheck="false" contenteditable="true" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nulla, nisi doloremque voluptatem voluptate reiciendis incidunt minus numquam. Incidunt fugiat eius rerum quidem voluptas omnis sed quibusdam odio vero similique?</p>
+
+    <br>
+    <br>
+
+    <!-- style -->
+    <h1>Style</h1>
+    <p style="color: firebrick;"><span style="color: forestgreen;" >Lorem</span>, ipsum dolor sit amet consectetur adipisicing elit. Incidunt illum sed magni doloremque vel earum quisquam provident eligendi, expedita distinctio quo, voluptas, deleniti laborum excepturi ducimus perferendis ipsa quasi exercitationem.</p>
+
+    <br>
+    <br>
+
+    <!-- tabindex -->
+    <h1>tabindex</h1>
+
+    <p tabindex="1" >primeiro</p>
+    <p tabindex="3">ultimo</p>
+    <p tabindex="2">segundo</p>
+
+    <br>
+    <br>
+
+    <!-- title -->
+    <h1>Title</h1>
+    <a href="https://youtube.com/hcodebrasil" title="Link para o canal da Hcode" >Hcode</a>
+
+    <br>
+    <br>
+
+    <!--translate-->
+    <h1>translate</h1>
+
+    <h2 translate="yes">Hello world</h2>
+    <h3 translate="no" >Welcome</h3>
+
+
+    <h4>Fim atributos globais</h4>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
